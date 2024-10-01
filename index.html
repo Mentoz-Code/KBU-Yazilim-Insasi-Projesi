@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toDoApp">
+            <div class="header">
+                <h2>To-Do List</h2>
+                <img src="assets/img/trash.png" id="deleteAllBtn" alt="Delete All" class="trash">
+            </div>
+            <div class="row">
+                <input type="text" id="inputBox" placeholder="To-Do Task goes here">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="listContainer"></ul>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>

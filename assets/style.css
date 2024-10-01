@@ -1,0 +1,165 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    min-height: 100vh; /* this makes it so that it fits the screen */
+    background: linear-gradient(123deg, #FFFFFF 0%, #00B2FF 100%), linear-gradient(236deg, #BAFF99 0%, #005E64 100%), linear-gradient(180deg, #FFFFFF 0%, #002A5A 100%), linear-gradient(225deg, #0094FF 20%, #BFF4ED 45%, #280F34 45%, #280F34 70%, #FF004E 70%, #E41655 85%, #B30753 85%, #B30753 100%), linear-gradient(135deg, #0E0220 15%, #0E0220 35%, #E40475 35%, #E40475 60%, #48E0E4 60%, #48E0E4 68%, #D7FBF6 68%, #D7FBF6 100%);
+    background-blend-mode: overlay, overlay, overlay, darken, normal;
+    /* background is taken from https://codioful.com/fearless-hue*/
+    padding: 10px;
+
+}
+
+/* TODOAPP */
+
+.toDoApp {
+    width: 100%;
+    max-width: 600px;
+    background: #f7f7f7;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 15px;
+}
+
+.toDoApp h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* INPUT AND BUTTON ROW */
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eeee;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #7dd63e;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 40px;
+    border: 2px solid #65ae2f;
+    font-weight: bolder;
+}
+
+button:active {
+    transform: scale(99%);
+    background: #70c236;
+}
+
+/* THE LIST AND ITS ELEMENTS */
+
+ul li {
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem 1rem 3rem;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-image: url(img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 0.75rem;
+    left: 0.5rem;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #5555;
+}
+
+ul li.checked::before {
+    background-image: url(img/checked.png);
+}
+
+/* THE SPAN IS THE LITTLE X ON THE SIDE */
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 0.7rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    color: #5555;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: rgb(202, 202, 202);
+    color: white;
+}
+
+/* TRASH BUTTON */
+
+.trash {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin: 7px;
+    padding: 2px;
+}
+
+.trash:focus, .trash:hover {
+    background: rgb(202, 202, 202);
+    border-radius: 7px;
+}
+
+/* SPACING OUT THE TRRASH FROM THE H2 */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header h2 {
+    margin: 0;
+    color: #280F34;
+}
